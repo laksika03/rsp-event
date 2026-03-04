@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Attendent</title>
+    <link rel="stylesheet" href="css/manage-attendent.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/create-event.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <img src="assets/logo.png" class="top-logo" alt="RSP Logo">
+        <div id="topbar-menu"></div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- ACTION BUTTONS -->
+        <div class="action-buttons">
+            <button id="uploadBtn" class="btn blue">Upload Attendee List</button>
+            <button id="createQRBtn" class="btn yellow">Create QR code</button>
+            <button id="exportQRBtn" class="btn green">Export QR code</button>
+            <input type="file" id="fileInput" hidden accept=".csv,.xlsx">
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="ค้นหาชื่อ / องค์กร / จังหวัด...">
+            <button id="filterBtn">Filter</button>
+        </div>
+
+        <!-- TABLE -->
+        <table class="attendee-table">
+            <thead>
+                <tr>
+                    <th>ลำดับ</th>
+                    <th>ชื่อ-นามสกุล</th>
+                    <th>ตำแหน่ง</th>
+                    <th>หน่วยงาน</th>
+                    <th>การจัดการ</th>
+                </tr>
+            </thead>
+            <tbody id="attendeeBody">
+                <tr>
+                    <td colspan="5" class="empty">ยังไม่มีข้อมูล</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="qrModal" class="qr-modal">
+            <div class="qr-card">
+                <h3>QR Code ผู้เข้าร่วม</h3>
+                <div id="qrBox"></div>
+                <button onclick="closeQR()">ปิด</button>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/topbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <script src="js/manage-attendent.js"></script>
+
+</body>
+
+</html>

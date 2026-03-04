@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f6f9fc;
+}
+
+/* TOPBAR */
+.topbar {
+    background: #fff;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+}
+
+.logo {
+    height: 40px;
+}
+
+.topbar nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #2f5597;
+}
+
+/* SUB MENU */
+.sub-menu {
+    padding: 12px 32px;
+    background: #e8f1ff;
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+}
+
+.sub-menu .active {
+    color: #2f5597;
+}
+
+.sub-menu {
+  display: flex;
+  gap: 16px;
+}
+
+.sub-menu__item {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  padding-bottom: 6px;
+}
+
+.sub-menu__item.active {
+  color: #2f5597;
+  border-bottom: 2px solid #2f5597;
+}
+
+
+/* BANNER */
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.scan-section {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* ===== SCANNER CARD ===== */
+.scanner-card {
+    background: #f1f6ff;
+    padding: 32px;
+    /* เพิ่ม padding */
+    border-radius: 32px;
+    /* โค้งขึ้น */
+    box-shadow: 0 24px 48px rgba(0, 0, 0, .22);
+    max-width: 1000px;
+    /* ⭐ ขยายการ์ด */
+    margin: auto;
+}
+
+/* กรอบกล้อง */
+.scanner-frame {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    /* ⭐ บังคับความสูงการ์ด */
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* wrapper + video */
+#qr-reader {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#qr-reader video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* ===== OVERLAY ===== */
+.scanner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* พื้นที่สแกน */
+.scan-area {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: transparent;
+}
+
+/* มุม */
+.corner {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 3px solid #ffffff;
+}
+
+.corner.tl {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner.tr {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner.bl {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+.corner.br {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+/* เส้น scan */
+.scan-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent,
+            #4f8cff,
+            transparent);
+    animation: scan 2.2s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* ===== STATUS ===== */
+.scanner-status {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(0, 0, 0, .55);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.scanner-status .dot {
+    width: 8px;
+    height: 8px;
+    background: #ff3b3b;
+    border-radius: 50%;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: .3;
+    }
+}
+
+.rec {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 12px;
+    color: red;
+}
+
+.hint {
+    color: #64748b;
+    margin-top: 12px;
+}
+
+.manual-btn {
+    margin-top: 16px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #2f5597;
+    background: #fff;
+    color: #2f5597;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+    background: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scan-result {
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 16px;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+.result-title {
+    font-weight: 700;
+    color: #334155;
+}
+
+.result-name {
+    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #2f5597;
+}
+
+.scan-result.success {
+    background: rgba(16, 185, 129, .14);
+}
+
+.scan-result.error {
+    background: rgba(239, 68, 68, .14);
+}
+
+.result {
+    margin-top: 18px;
+    padding: 16px 20px;
+    border-radius: 14px;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.result.success {
+    background: #dcfce7;
+    color: #166534;
+    animation: pop 0.35s ease;
+}
+
+.result.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.96);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.scan-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.95);
+    width: 420px;
+    border-radius: 16px;
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+    animation: pop .25s ease forwards;
+    z-index: 10;
+}
+
+@keyframes pop {
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.scan-popup.success {
+    background: #2fb05f;
+}
+
+.scan-popup.error {
+    background: #e53935;
+}
+
+.scan-popup.hidden {
+    display: none;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#popupIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+#popupTime {
+    margin-left: auto;
+    font-size: 14px;
+    opacity: .9;
+}
+
+.popup-body {
+    padding: 16px 20px 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}

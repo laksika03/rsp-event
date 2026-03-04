@@ -1,0 +1,205 @@
+/* =================================================
+   DETAIL PAGE (Event Detail)
+   ใช้เฉพาะหน้า detail.html
+================================================= */
+
+/* ---------- Page Background ---------- */
+.detail-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #5f8fc2 0%, #eaf1f8 100%);
+  padding-bottom: 64px;
+  position: relative;
+}
+
+/* ปุ่มปิด (X) */
+.close-detail {
+  position: absolute;   /* อิงกับ .detail-card */
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #f1f4f8;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+  transition: background .2s, transform .2s;
+}
+
+.close-detail:hover {
+  background: #ffffff;
+  transform: rotate(90deg);
+}
+
+
+/* ---------- Wrapper ---------- */
+.detail-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 24px 0;
+}
+
+/* ---------- Title ---------- */
+.detail-title {
+  display: block;
+  margin: 0 auto 32px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+/* ---------- Main Card ---------- */
+.detail-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 36px 40px 40px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.25);
+  position: relative;
+}
+
+/* ---------- Poster ---------- */
+.detail-poster {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 28px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 14px 32px rgba(0,0,0,.25);
+}
+
+/* ---------- Meta Info ---------- */
+.detail-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.detail-info p {
+  background: #f4f6fa;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 14.5px;
+  color: #1f3f7a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- Description ---------- */
+.detail-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #333;
+  border-top: 1px solid #eef2f7;
+  padding-top: 24px;
+  margin-bottom: 36px;
+  white-space: pre-line;
+}
+
+/* ---------- Action Button ---------- */
+.register-btn {
+  display: inline-block;
+  margin-left: auto;
+  background: linear-gradient(135deg, #2d74da, #1f5fbf);
+  color: #ffffff;
+  border: none;
+  padding: 14px 44px;
+  border-radius: 36px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(45,116,218,.4);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(45,116,218,.5);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .detail-wrapper {
+    padding-top: 64px;
+  }
+
+  .detail-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .detail-card {
+    padding: 24px;
+  }
+
+  .detail-poster {
+    margin-bottom: 20px;
+  }
+
+  .register-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- Extra Sections ---------- */
+.detail-section {
+  margin-bottom: 32px;
+}
+
+.detail-section h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1f3f7a;
+}
+
+.detail-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.detail-list li {
+  position: relative;
+  /* padding-left: 24px; */
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* .detail-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2d74da;
+  font-size: 22px;
+  line-height: 1;
+} */
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.status-open {
+  background: #e6f7ee;
+  color: #1e824c;
+}
+
+.status-almost {
+  background: #fff6e0;
+  color: #b26a00;
+}
+
+.status-closed {
+  background: #fdecea;
+  color: #c0392b;
+}

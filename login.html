@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | RSP Event</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="login-page">
+
+  <div class="login-card">
+
+    <img src="assets/logo.png" class="brand-logo" alt="STSP Logo">
+
+    <h1>Welcome to RSP Event</h1>
+    <p class="subtitle">Event Management System</p>
+
+    <!-- ✅ มีฟอร์มเดียว -->
+    <form id="login-form" class="login-form">
+      <input 
+        id="login-username"
+        type="text"
+        placeholder="Username"
+        required
+      >
+
+      <input
+        id="login-password"
+        type="password"
+        placeholder="Password"
+        required
+      >
+
+      <p id="login-error" class="login-error"></p>
+
+      <button type="submit">Sign in</button>
+    </form>
+
+    <div class="login-footer">
+      <a href="#">Forgot password?</a>
+      <a href="register.html">Create account</a>
+    </div>
+
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

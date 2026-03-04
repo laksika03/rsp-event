@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>รายชื่อผู้เข้าร่วมกิจกรรม</title>
+  <link rel="stylesheet" href="css/attendee-list.css" />
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/topbar.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <img src="assets/logo.png" class="top-logo">
+    <div id="topbar-menu"></div>
+  </header>
+
+      <!-- ===== SUB MENU ===== -->
+<section class="sub-menu">
+  <a href="scan.html" class="sub-menu__item">📷 Scan</a>
+  <a href="attendee-list.html" class="sub-menu__item active">👥 Attendent</a>
+</section>
+
+
+  <!-- PAGE -->
+  <section class="page">
+
+    <h1>รายชื่อผู้เข้าร่วมกิจกรรม มหกรรมเทคโนโลยีเพื่อชีวิต</h1>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+      <div class="card orange">
+        <span>ผู้ลงทะเบียนทั้งหมด</span>
+        <b id="totalCount">0</b> คน
+      </div>
+      <div class="card green">
+        <span>เช็คอินแล้ว</span>
+        <b id="checkedCount">0</b> คน
+      </div>
+      <div class="card red">
+        <span>ยังไม่เช็คอิน</span>
+        <b id="pendingCount">0</b> คน
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-bar">
+      <input id="searchInput" placeholder="ค้นหาชื่อ / องค์กร / จังหวัด..." />
+      <div class="filter-wrap">
+        <button id="filterToggle" class="filter-btn" type="button">
+          <svg class="filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+          <span>Filter</span>
+        </button>
+
+        <ul class="filter-menu" id="filterMenu">
+          <li data-value="all" class="active">ทั้งหมด</li>
+          <li data-value="checked">เช็คอินแล้ว</li>
+          <li data-value="pending">ยังไม่เช็คอิน</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-box">
+      <table>
+        <thead>
+          <tr>
+            <th>ลำดับ</th>
+            <th>ชื่อ-นามสกุล</th>
+            <th>ตำแหน่ง</th>
+            <th>หน่วยงาน</th>
+            <th>สถานะ</th>
+          </tr>
+        </thead>
+        <tbody id="attendeeBody"></tbody>
+      </table>
+    </div>
+
+    <!-- EXPORT -->
+    <div class="export">
+      <button class="pdf">PDF</button>
+      <button class="excel">Excel</button>
+    </div>
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+  <script src="js/topbar.js"></script>
+  <script src="js/attendee-list.js"></script>
+</body>
+
+</html>

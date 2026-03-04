@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Create New Event | RSP EVENT</title>
+
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/topbar.css">
+  <link rel="stylesheet" href="css/create-event.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <img src="assets/logo.png" class="top-logo" alt="RSP Logo">
+    <div id="topbar-menu"></div>
+  </header>
+
+  <!-- PAGE -->
+  <main class="page">
+
+    <!-- header -->
+    <div class="page-header">
+      <a href="my-event.html" class="back">←</a>
+      <h1>Create New Event</h1>
+      <a href="manage-attendent.html" id="manageAttendeeBtn" class="secondary-btn">
+        Manage Attenden
+      </a>
+    </div>
+
+    <!-- form -->
+    <form class="event-form" id="createEventForm">
+
+      <label>ชื่อกิจกรรม</label>
+      <input type="text" id="eventTitle" placeholder="กรอกชื่อกิจกรรม" required>
+
+      <label>โปสเตอร์กิจกรรม</label>
+
+      <div class="upload-box" id="uploadBox">
+        <img id="posterPreview" alt="poster preview">
+        <input type="file" hidden id="posterInput" accept="image/*">
+
+        <p><strong>ลากและวาง</strong> หรือคลิกเพื่ออัปโหลด</p>
+        <span>SVG, PNG, JPG (ขนาดไม่เกิน 5MB)</span>
+      </div>
+
+
+      <label>คำอธิบายกิจกรรม</label>
+      <textarea id="eventDesc" placeholder="กรอกคำอธิบายกิจกรรม" rows="4"></textarea>
+
+      <div class="grid-3">
+        <div>
+          <label>ห้องที่ใช้</label>
+          <select id="eventRoom">
+            <option value="">กรอกชื่อห้อง</option>
+            <option value="A - G01  ห้องโถงลูมิน่า">A - G01  ห้องโถงลูมิน่า</option>
+            <option value="A - G02  ห้องประชุมวิสัยทัศน์">A - G02  ห้องประชุมวิสัยทัศน์</option>
+            <option value="A - G03  ห้องหลอมรวมความคิด">A - G03  ห้องหลอมรวมความคิด</option>
+            <option value="A - G04  หอประชุมปัญญาประดิษฐ์">A - G04  หอประชุมปัญญาประดิษฐ์</option>
+            <option value="A - G05  ห้องแลกเปลี่ยนอะกอร่า">A - G05  ห้องแลกเปลี่ยนอะกอร่า</option>
+            <option value="A - G06  ห้องสารัตถะ">A - G06  ห้องสารัตถะ</option>
+          </select>
+        </div>
+
+        <div>
+          <label>วันที่/เวลา เริ่มกิจกรรม</label>
+          <input type="datetime-local" id="startDate" required>
+        </div>
+
+        <div>
+          <label>วันที่/เวลา สิ้นสุดกิจกรรม</label>
+          <input type="datetime-local" id="endDate" required>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <input id="speaker1" placeholder="กรอกชื่อผู้บรรยาย 1">
+        <input id="speaker2" placeholder="กรอกชื่อผู้บรรยาย 2 (ถ้ามี)">
+        <input id="capacity" type="number" placeholder="กรอกจำนวนผู้สมัคร" min="1">
+      </div>
+
+      <label>หมายเหตุเพิ่มเติม</label>
+      <textarea id="eventNote" placeholder="กรอกหมายเหตุ" rows="3"></textarea>
+
+      <!-- สำคัญ: type=button เพื่อไม่ให้ form reload -->
+      <button type="button" id="saveEventBtn" class="primary-btn">
+        บันทึกข้อมูล
+      </button>
+
+    </form>
+
+  </main>
+  
+  <script src="js/topbar.js"></script>
+  <script src="js/create-event.js"></script>
+
+</body>
+
+</html>

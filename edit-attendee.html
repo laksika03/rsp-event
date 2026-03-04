@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Attendee</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <!-- <link rel="stylesheet" href="css/edit-attendee.css"> -->
+     <link rel="stylesheet" href="css/create-event.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <img src="assets/logo.png" class="top-logo">
+        <div id="topbar-menu"></div>
+    </header>
+
+    <main class="page">
+
+        <div class="page-header">
+            <a href="javascript:history.back()" class="back">←</a>
+            <h1>แก้ไขข้อมูลผู้เข้าร่วม</h1>
+        </div>
+
+        <form class="event-form">
+
+            <label>ชื่อ</label>
+            <input id="firstName">
+
+            <label>สกุล</label>
+            <input id="lastName">
+
+            <label>ตำแหน่ง</label>
+            <input id="position">
+
+            <label>หน่วยงาน</label>
+            <input id="organization">
+
+            <label>อีเมล</label>
+            <input id="email" type="email">
+
+            <label>เบอร์โทรศัพท์</label>
+            <input id="phone" type="tel">
+
+            <button type="button" id="saveBtn" class="primary-btn">
+                บันทึก
+            </button>
+
+        </form>
+
+    </main>
+
+    <script src="js/topbar.js"></script>
+    <script src="js/edit-attendee.js"></script>
+</body>
+
+</html>

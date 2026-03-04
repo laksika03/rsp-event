@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+}
+
+/* ================= Hero ================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1.9fr;
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left {
+  background: #355c8a;
+  color: white;
+  padding: 100px 70px;
+  clip-path: polygon(
+    0 0,
+    82% 0,
+    100% 50%,
+    82% 100%,
+    0 100%
+  );
+  z-index: 2;
+}
+
+.hero-logo {
+  width: 140px;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero-left p {
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  opacity: 0.6;
+}
+
+.dots span:first-child {
+  background: white;
+}
+
+.hero-right {
+  position: relative;
+  overflow: visible;
+}
+
+.hero-right img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: 1;
+  filter: contrast(1.02) saturate(1.03);
+  display: block;
+}
+
+/* ================= EVENT SECTION ================= */
+.event-section {
+  background: linear-gradient(#c3dbfd, #7aacf2);
+  padding: 32px 36px 24px;
+}
+
+/* ================= EVENT SEARCH ================= */
+.event-search-container {
+  max-width: 800px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.event-search-wrapper {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #e1e8f4 100%);
+  border-radius: 50px;
+  padding: 1px 4px 1px 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.15);
+}
+
+.search-icon {
+  margin-right: 12px;
+  opacity: 0.7;
+}
+
+.event-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 16px 12px;
+  font-size: 15px;
+}
+
+.clear-search-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #e8ecf2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ================= EVENTS ================= */
+.events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 60px;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.14);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.event-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.info {
+  padding: 10px 12px 12px;
+}
+
+.info p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f3f7a;
+  margin-bottom: 5px;
+}
+
+.info span {
+  font-size: 11.5px;
+  color: #666;
+}
+/* ================= Event Card Hover Effect ================= */
+.event-card {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.18);
+}
+
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 40px;
+  }
+
+  .hero-right img {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+}

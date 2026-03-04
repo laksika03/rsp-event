@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รายละเอียดกิจกรรม</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">  
+
+</head>
+<body class="detail-page">
+
+<div class="detail-wrapper">
+
+  <h1 id="title" class="detail-title"></h1>
+
+  <div class="detail-card"> 
+      <button class="close-detail" onclick="window.location.href='index.html'">
+        ×
+      </button>
+
+    <img id="poster" class="detail-poster" alt="poster">
+
+    <div class="detail-info">
+      <p id="date"></p>
+      <p id="time"></p>
+      <p id="speaker"></p>
+    </div>
+
+    <div class="detail-desc" id="description"></div>
+    <div id="extra-sections"></div>
+    
+    <button class="register-btn">ลงทะเบียน</button>
+
+  </div>
+</div>
+
+<script src="js/detail.js"></script>
+</body>
+</html>

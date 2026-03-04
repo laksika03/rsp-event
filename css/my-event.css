@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: "Prompt", sans-serif;  
+  background: linear-gradient(#c3dbfd, #7aacf2);
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  background: #fff;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 36px;
+}
+
+/* ===== PAGE ===== */
+.my-event-page {
+  padding: 32px 48px;
+}
+
+h1 {
+  font-size: 42px;
+  color: #375a8c;
+  margin-bottom: 20px;
+}
+
+/* ================= EVENT SEARCH ================= */
+.event-search-container {
+  max-width: 800px;
+  /* margin: 0 auto 32px; */
+  text-align: right;
+}
+
+.event-search-wrapper {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #fdfdfd 100%);
+  border-radius: 50px;
+  padding: 1px 4px 1px 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.15);
+}
+
+.search-icon {
+  margin-right: 12px;
+  opacity: 0.7;
+}
+
+.event-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 16px 12px;
+  font-size: 15px;
+}
+
+.clear-search-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #e8ecf2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ===== SECTION ===== */
+.section {
+  margin-top: 36px;
+}
+
+.section h2 {
+  font-size: 22px;
+  color: #375a8c;
+  margin-bottom: 18px;
+}
+
+/* ===== CREATE ===== */
+.create-card {
+  width: 360px;
+  height: 220px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.plus {
+  width: 100px;
+  height: 100px;
+  background: #eef3fb;
+  border-radius: 20px;
+  font-size: 64px;
+  color: #a7c1e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+/* ===== GRID ===== */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* ===== CARD (COMPACT) ===== */
+.event-card {
+  background: #fff;
+  border-radius: 16px; /* ลดจาก 20 */
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,.12); /* เบาลง */
+}
+
+/* image */
+.event-card img {
+  width: 100%;
+  height: 150px;
+  display: block;                 /* 🔥 สำคัญ */
+  object-fit: cover;
+  border-top-left-radius: 16px;   /* ให้ชิดการ์ด */
+  border-top-right-radius: 16px;
+}
+
+/* actions */
+.card-actions {
+  display: flex;
+  gap: 8px;       /* ลดช่องว่าง */
+  padding: 12px; /* ลด padding */
+}
+
+.card-actions button {
+  flex: 1;
+  border: none;
+  padding: 8px 0; /* 🔻 จาก 10 */
+  border-radius: 14px;
+  background: #5f93e8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px; /* เพิ่มความ compact */
+  cursor: pointer;
+}
+
+.card-actions button:hover {
+  background: #467cd3;
+}
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0,0,0,.16);
+  transition: all .25s ease;
+}
+
+/* ===== CREATE EVENT CARD (REFINED) ===== */
+.create-event-card {
+  flex: 0 0 auto;
+  width: 230px;
+  height: 150px;
+  justify-self: start;
+  align-self: start;
+
+  margin-top: 40px;          /* 🔥 เพิ่มระยะห่างจาก search */
+  margin-bottom: 8px;        /* 🔹 กันชิด grid ด้านล่าง */
+
+  border: 2px dashed #c6d7f2;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}/* ===== CREATE EVENT SECTION ===== */
+.create-event-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ===== CREATE EVENT CARD ===== */
+.create-event-card {
+  width: 230px;
+  height: 150px;
+
+  margin-top: 40px;
+
+  border: 2px dashed #c6d7f2;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+/* inner */
+.create-event-card .create-inner {
+  height: 100%;              /* 🔥 ให้เต็มการ์ด */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* plus icon */
+.create-event-card .create-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #eef3fb;
+  color: #5f93e8;
+  font-size: 24px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* text */
+.create-event-card p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #375a8c;
+}
+
+.event-title {
+  padding: 10px 14px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #375a8c;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

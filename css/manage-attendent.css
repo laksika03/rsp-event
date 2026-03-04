@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(#dbe9f8, #6b9bd3);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: #fff;
+}
+
+.back {
+  text-decoration: none;
+  font-size: 22px;
+  color: #2f5597;
+}
+
+.container {
+  padding: 32px;
+}
+
+/* buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px; 
+}
+
+.btn {
+  padding: 32px 42px;
+  border-radius: 16px;
+  border: none;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  color: #fff;
+}
+
+.blue { background: #5a8dee; }
+.yellow { background: #d3dd3f; color: #fff; }
+.green { background: #4fcb81; }
+
+/* search */
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 20px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #3b6fb6;
+  color: #fff;
+}
+
+/* table */
+.attendee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.attendee-table th {
+  background: #3b5f8c;
+  color: #fff;
+  padding: 14px;
+}
+
+.attendee-table td {
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.empty {
+  color: #999;
+}
+
+/* ===============================
+   VISUAL POLISH (MATCH UI)
+=============================== */
+
+/* container ให้ดูเป็นแผ่นเดียวกับภาพตัวอย่าง */
+.container {
+  background: linear-gradient(180deg, #dbe9f8 0%, #9bbcf1 100%);
+  border-radius: 24px;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.btn {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transition: all .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  opacity: .95;
+}
+
+/* ===== SEARCH BAR ===== */
+.search-bar input {
+  height: 48px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  transition: box-shadow .2s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  box-shadow: 0 8px 24px rgba(47,85,151,.25);
+}
+
+.search-bar button {
+  height: 48px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  transition: all .2s ease;
+}
+
+.search-bar button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+
+/* ===== TABLE ===== */
+.attendee-table {
+  margin-top: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+
+.attendee-table th {
+  font-size: 15px;
+  letter-spacing: .3px;
+}
+
+.attendee-table tbody tr {
+  transition: background .15s ease;
+}
+
+.attendee-table tbody tr:hover {
+  background: #f3f7fd;
+}
+
+/* empty row จัดกลางให้เหมือน mock */
+.attendee-table .empty {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+}
+#qrBox {
+  width: 220px;
+  height: 220px;
+  margin: 16px auto;
+}
+
+#qrBox canvas,
+#qrBox img {
+  width: 220px !important;
+  height: 220px !important;
+  display: block;
+}

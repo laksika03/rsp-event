@@ -1,0 +1,172 @@
+/* ========== REGISTER PAGE (SINGLE CARD) ========== */
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.register-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #5f8fc2, #2f5597);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Card ---------- */
+.register-card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 46px 44px 40px;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,.25);
+}
+
+/* ---------- Brand ---------- */
+.brand-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Text ---------- */
+.register-card h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1f3f7a;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7a90;
+  margin-bottom: 32px;
+}
+
+/* ---------- Form ---------- */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* rows */
+.row {
+  display: grid;
+  gap: 12px;
+}
+
+.row.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.row.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* inputs */
+.register-form input,
+.register-form select {
+  padding: 13px 15px;
+  border-radius: 12px;
+  border: 1px solid #dbe3f0;
+  font-size: 14.5px;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  outline: none;
+  border-color: #4f7fc4;
+}
+
+/* button */
+.register-form button {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #2d74da;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.register-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(45,116,218,.45);
+}
+
+/* footer */
+.register-footer {
+  margin-top: 22px;
+  font-size: 13px;
+}
+
+.register-footer a {
+  color: #4f7fc4;
+  text-decoration: none;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 36px 24px;
+  }
+
+  .row.two,
+  .row.three {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Horizontal Form ---------- */
+
+.register-form.horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* grid rows */
+.row {
+  display: grid;
+  gap: 14px;
+}
+
+.row.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.row.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* input style */
+.register-form input,
+.register-form select {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #dbe3f0;
+  font-size: 14.5px;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  outline: none;
+  border-color: #2d74da;
+}
+
+/* responsive: มือถือกลับเป็นแนวตั้งอัตโนมัติ */
+@media (max-width: 600px) {
+  .row.two,
+  .row.three {
+    grid-template-columns: 1fr;
+  }
+}

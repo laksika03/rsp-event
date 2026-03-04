@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Analytic Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/analytic-dashboard.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/topbar.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <img src="assets/logo.png" class="top-logo">
+        <div id="topbar-menu"></div>
+    </header>
+
+    <section class="sub-menu">
+        <div class="tab-group">
+            <a href="event-dashboard.html" class="tab" id="tab-view">
+                👁 View
+            </a>
+            <a href="analytic-dashboard.html" class="tab" id="tab-analytic">
+                📊 Analytic
+            </a>
+        </div>
+    </section>
+
+    <main class="dashboard">
+
+        <div class="header">
+            <h1>Dashboard</h1>
+            <input class="search" placeholder="ค้นหา">
+        </div>
+
+        <section class="summary">
+            <div class="card">
+                <div>
+                    <span>จำนวนผู้ลงทะเบียนทั้งหมด</span>
+                    <h2 id="totalCount">0 คน</h2>
+                </div>
+                👥
+            </div>
+
+            <div class="card">
+                <div>
+                    <span>จำนวนคนที่เช็คอินแล้ว</span>
+                    <h2 id="checkinCount">0 คน</h2>
+                </div>
+                🔍
+            </div>
+        </section>
+
+        <section class="charts-2">
+            <div class="chart-box">
+                <h3>แสดงอัตราการเช็คอิน</h3>
+                <canvas id="donutChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h3>แสดงสถานะผู้ลงทะเบียน</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+
+        <section class="chart-full">
+            <h3>แสดงอัตราการเช็คอิน</h3>
+            <canvas id="lineChart"></canvas>
+        </section>
+
+    </main>
+    <script src="js/topbar.js"></script>
+    <script src="js/analytic-dashboard.js"></script>
+</body>
+
+</html>
